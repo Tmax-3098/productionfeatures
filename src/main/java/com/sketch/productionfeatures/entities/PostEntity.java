@@ -12,7 +12,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "posts")
-public class PostEntity {
+public class PostEntity extends  AuditableEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,4 +21,16 @@ public class PostEntity {
     private String title;
 
     private String description;
+
+    @PrePersist
+    void beforeSave(){
+        System.out.println("calling before save");
+    }
+
+    @PreUpdate
+    void beforeUpdate(){
+        System.out.println("calling before update");
+    }
+
+
 }
