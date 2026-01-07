@@ -1,0 +1,33 @@
+2026-01-07T13:52:25.970+05:30  INFO 40549 --- [productionfeatures] [main] c.s.p.DriverServiceTest                  : Starting DriverServiceTest using Java 23.0.1 with PID 40549 (started by ishaan in /Users/ishaan/Desktop/SpringBoot/productionfeatures)
+2026-01-07T13:52:25.971+05:30  INFO 40549 --- [productionfeatures] [main] c.s.p.DriverServiceTest                  : No active profile set, falling back to 1 default profile: "default"
+2026-01-07T13:52:26.175+05:30  INFO 40549 --- [productionfeatures] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-07T13:52:26.192+05:30  INFO 40549 --- [productionfeatures] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 1 JPA repository interface.
+2026-01-07T13:52:26.358+05:30  INFO 40549 --- [productionfeatures] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-07T13:52:26.376+05:30  INFO 40549 --- [productionfeatures] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-07T13:52:26.462+05:30  INFO 40549 --- [productionfeatures] [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2026-01-07T13:52:26.522+05:30  INFO 40549 --- [productionfeatures] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-07T13:52:26.532+05:30  INFO 40549 --- [productionfeatures] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-07T13:52:26.658+05:30  INFO 40549 --- [productionfeatures] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b9fea11
+2026-01-07T13:52:26.659+05:30  INFO 40549 --- [productionfeatures] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-07T13:52:26.692+05:30  INFO 40549 --- [productionfeatures] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/prodFeatures?useSSl=false]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 9.3
+	Default catalog/schema: prodFeatures/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-07T13:52:26.759+05:30  INFO 40549 --- [productionfeatures] [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.sketch.productionfeatures.entities.PostEntity
+2026-01-07T13:52:27.005+05:30  INFO 40549 --- [productionfeatures] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-07T13:52:27.040+05:30  INFO 40549 --- [productionfeatures] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-07T13:52:27.118+05:30  INFO 40549 --- [productionfeatures] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-07T13:52:27.171+05:30  WARN 40549 --- [productionfeatures] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-07T13:52:27.310+05:30  INFO 40549 --- [productionfeatures] [main] c.s.p.DriverServiceTest                  : Started DriverServiceTest in 1.447 seconds (process running for 1.85)
+2026-01-07T13:52:27.591+05:30  INFO 40549 --- [productionfeatures] [main] c.s.p.c.impl.DriverServiceClientImpl     : Successfully retrieved the employees
+2026-01-07T13:52:27.596+05:30  INFO 40549 --- [productionfeatures] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-07T13:52:27.597+05:30  INFO 40549 --- [productionfeatures] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-07T13:52:27.599+05:30  INFO 40549 --- [productionfeatures] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

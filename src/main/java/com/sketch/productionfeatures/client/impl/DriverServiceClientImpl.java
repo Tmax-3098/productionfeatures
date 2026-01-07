@@ -6,6 +6,8 @@ import com.sketch.productionfeatures.config.RestClientConfig;
 import com.sketch.productionfeatures.dto.DriverDto;
 import com.sketch.productionfeatures.exceptions.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -19,17 +21,27 @@ import java.util.List;
 public class DriverServiceClientImpl implements DriverServiceClient {
 
     private final RestClient restClient;
+    Logger log = LoggerFactory.getLogger(DriverServiceClientImpl.class);
 
     @Override
     public ApiResponse<List<DriverDto>> getAllDriver() {
+//        log.info("info log");
+//        log.error("error log");
+//        log.warn("warn log");
+//        log.debug("debug log");
+//        log.trace("trace log");
+
         try{
             ApiResponse<List<DriverDto>> driverList = restClient.get()
                     .uri("getDrivers")
                     .retrieve()
                     .body(new ParameterizedTypeReference<>() {
                     });
+            log.info("Successfully retrieved the employees");
             return driverList;
+
         }catch(Exception e){
+            log.error("Exception occurred in get all employees", e);
             throw new RuntimeException(e);
         }
 
