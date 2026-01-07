@@ -16,7 +16,8 @@ public class GlobalResponseHandler implements ResponseBodyAdvice<Object> {
 
     @Override
     public boolean supports(MethodParameter returnType, Class<? extends HttpMessageConverter<?>> converterType) {
-        return true;
+        String path = returnType.getContainingClass().getPackageName();
+        return !path.startsWith("org.springdoc");
     }
 
     @Override
